@@ -71,7 +71,7 @@ export default function Index() {
           <button onClick={() => scrollTo("home")} className="flex items-center gap-2 group">
             <span className="text-3xl animate-float inline-block">🍎</span>
             <span className="font-oswald text-xl font-bold text-[#2d5a1b] tracking-wide">
-              Яблочный<span className="text-orange-500"> край</span>
+Сбор яблок | Лебедянь 2026</span>
             </span>
           </button>
 

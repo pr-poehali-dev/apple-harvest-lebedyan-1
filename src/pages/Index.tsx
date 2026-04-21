@@ -149,8 +149,8 @@ export default function Index() {
 
             <p className="text-white/80 text-lg font-golos mb-8 leading-relaxed animate-fade-up-delay-2">
               Ищем сборщиков в сады Лебедяни — Троекурово и Агроном.<br />
-              <span className="text-orange-300 font-semibold">5 руб/кг</span>, выплата каждые 3 дня. Свободный график.<br />
-              Бесплатное питание, проезд и проживание для вахтовиков!
+              <span className="text-orange-300 font-semibold">5 руб/кг</span>, свободный график.<br />
+              Бесплатное питание и проезд!
             </p>
 
             <div className="flex flex-wrap gap-3 animate-fade-up-delay-3">

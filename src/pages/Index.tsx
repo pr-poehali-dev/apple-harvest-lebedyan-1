@@ -9,11 +9,11 @@ const APPLE_POINTS = [
 ];
 
 const FAQ_ITEMS = [
-  { q: "Как оставить заявку на сбор яблок?", a: "Заполните форму в разделе «Заявки» — укажите имя, телефон, желаемую точку и количество яблок. Мы перезвоним в течение часа." },
-  { q: "Какой минимальный объём заявки?", a: "Минимальный заказ — 10 кг. Яблоки выдаются в ящиках по 15–20 кг или на развес по вашему запросу." },
-  { q: "Можно ли самостоятельно собрать яблоки?", a: "Да! В садах «Лебедянский» и «Центральный» работает формат «Сорви сам». Стоимость — 25 руб/кг." },
-  { q: "Есть ли доставка по Лебедяни?", a: "Доставка работает при заказе от 30 кг. Стоимость — 200 руб. Доставляем в пределах города." },
-  { q: "Когда сезон сбора яблок?", a: "Сезон длится с конца июля по октябрь. Пик урожая — август–сентябрь. Следите за актуальными точками на карте." },
+  { q: "Нужен ли опыт для работы сборщиком?", a: "Нет, опыт не нужен. Мы проводим короткий инструктаж на месте. Главное — желание работать и физическая активность." },
+  { q: "Сколько можно заработать за смену?", a: "Оплата сдельная: от 3 до 6 рублей за кг в зависимости от сорта и сада. Средний заработок за смену — от 1 500 до 3 000 рублей." },
+  { q: "Какой график работы?", a: "Гибкий график: работаем с 07:00 до 19:00. Можно выходить на неполный день. Договариваемся индивидуально." },
+  { q: "Обеспечивается ли инвентарь?", a: "Да, всё необходимое предоставляем бесплатно: корзины, лестницы, перчатки. Приходите в удобной одежде." },
+  { q: "Когда сезон и сколько длится работа?", a: "Сезон с конца июля по октябрь — около 3 месяцев. Пик загрузки в августе–сентябре. Берём всех желающих." },
 ];
 
 export default function Index() {
@@ -137,16 +137,20 @@ export default function Index() {
               <span className="text-white/90 text-sm font-golos">Лебедянь, Липецкая область</span>
             </div>
 
+            <div className="inline-flex items-center gap-2 bg-orange-500/80 border border-orange-400/50 rounded-full px-4 py-1.5 mb-4 animate-fade-up">
+              <span className="text-white text-sm font-golos font-semibold">🔥 Срочный набор — сезон уже начался!</span>
+            </div>
+
             <h1 className="font-oswald text-5xl md:text-7xl font-bold text-white leading-tight mb-6 animate-fade-up-delay-1">
-              СВЕЖИЕ<br />
-              <span className="text-orange-400">ЯБЛОКИ</span><br />
-              ПРЯМО С ВЕТКИ
+              НУЖНЫ<br />
+              <span className="text-orange-400">СБОРЩИКИ</span><br />
+              ЯБЛОК
             </h1>
 
             <p className="text-white/80 text-lg font-golos mb-8 leading-relaxed animate-fade-up-delay-2">
-              4 точки сбора в Лебедяни и окрестностях.<br />
-              Антоновка, Белый налив, Семеренко и другие сорта.<br />
-              Сезон открыт — успей заказать!
+              Ищем сборщиков яблок в Лебедяни и окрестностях.<br />
+              Сдельная оплата от 3 руб/кг. Гибкий график.<br />
+              Опыт не нужен — обучим на месте!
             </p>
 
             <div className="flex flex-wrap gap-3 animate-fade-up-delay-3">
@@ -154,7 +158,7 @@ export default function Index() {
                 onClick={() => scrollTo("requests")}
                 className="bg-orange-500 hover:bg-orange-400 text-white font-oswald font-semibold text-lg px-8 py-3.5 rounded-2xl transition-all duration-200 hover:scale-105 shadow-lg shadow-orange-900/30"
               >
-                Оставить заявку
+                Хочу работать
               </button>
               <button
                 onClick={() => scrollTo("map")}
@@ -167,9 +171,9 @@ export default function Index() {
 
             <div className="mt-14 flex flex-wrap gap-8">
               {[
-                { value: "4", label: "точки сбора" },
-                { value: "8+", label: "сортов яблок" },
-                { value: "25₽", label: "за кг «Сорви сам»" },
+                { value: "4", label: "сада в Лебедяни" },
+                { value: "3–6₽", label: "за кг яблок" },
+                { value: "3 мес", label: "длится сезон" },
               ].map((s, i) => (
                 <div key={i} className="animate-fade-up" style={{ animationDelay: `${0.5 + i * 0.1}s` }}>
                   <div className="font-oswald text-3xl font-bold text-orange-400">{s.value}</div>
@@ -193,14 +197,14 @@ export default function Index() {
         <div className="max-w-6xl mx-auto px-4">
           <div className="text-center mb-12">
             <span className="inline-block bg-green-100 text-green-700 text-sm font-golos font-medium px-4 py-1.5 rounded-full mb-4">
-              🗺 Интерактивная карта
+              🗺 Места работы
             </span>
             <h2 className="font-oswald text-4xl md:text-5xl font-bold text-stone-800 mb-4">
-              ТОЧКИ СБОРА<br />
-              <span className="text-gradient">В ЛЕБЕДЯНИ</span>
+              САДЫ ГДЕ<br />
+              <span className="text-gradient">НУЖНЫ ЛЮДИ</span>
             </h2>
             <p className="text-stone-500 font-golos max-w-xl mx-auto">
-              Выберите удобную точку — кликните на карточку, чтобы узнать подробности
+              Выберите ближайший сад — кликните на карточку, чтобы узнать режим работы и условия
             </p>
           </div>
 
@@ -247,7 +251,7 @@ export default function Index() {
                         onClick={(e) => { e.stopPropagation(); scrollTo("requests"); }}
                         className="mt-2 w-full bg-orange-500 text-white text-sm font-golos font-medium py-2 rounded-xl hover:bg-orange-400 transition-colors"
                       >
-                        Оставить заявку
+                        Хочу сюда работать
                       </button>
                     </div>
                   )}
@@ -279,21 +283,21 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <span className="inline-block bg-white/10 text-orange-300 text-sm font-golos font-medium px-4 py-1.5 rounded-full mb-6 border border-white/15">
-                📝 Форма заявки
+                👷 Анкета сборщика
               </span>
               <h2 className="font-oswald text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
-                ОСТАВЬТЕ<br />
-                <span className="text-orange-400">ЗАЯВКУ</span><br />
-                НА ЯБЛОКИ
+                ХОЧУ<br />
+                <span className="text-orange-400">РАБОТАТЬ</span><br />
+                СБОРЩИКОМ
               </h2>
               <p className="text-white/70 font-golos text-lg leading-relaxed mb-8">
-                Мы перезвоним в течение часа и подтвердим наличие нужного сорта на выбранной точке.
+                Оставьте заявку — мы свяжемся в течение часа, расскажем об условиях и назначим выход на смену.
               </p>
               <div className="space-y-4">
                 {[
-                  { icon: "Phone", text: "Бесплатная консультация" },
-                  { icon: "Package", text: "Упакуем в ящики или пакеты" },
-                  { icon: "Truck", text: "Доставка от 30 кг" },
+                  { icon: "Banknote", text: "Сдельная оплата от 3 руб/кг" },
+                  { icon: "Clock", text: "Гибкий график, неполный день" },
+                  { icon: "ShieldCheck", text: "Весь инвентарь предоставляем бесплатно" },
                 ].map((item, i) => (
                   <div key={i} className="flex items-center gap-3 text-white/80 font-golos">
                     <div className="w-8 h-8 bg-white/10 rounded-lg flex items-center justify-center">
@@ -309,12 +313,12 @@ export default function Index() {
               {formSent ? (
                 <div className="text-center py-8 animate-scale-in">
                   <div className="text-6xl mb-4">🎉</div>
-                  <h3 className="font-oswald text-2xl font-bold text-stone-800 mb-2">Заявка отправлена!</h3>
-                  <p className="text-stone-500 font-golos">Мы перезвоним вам в течение часа</p>
+                  <h3 className="font-oswald text-2xl font-bold text-stone-800 mb-2">Анкета отправлена!</h3>
+                  <p className="text-stone-500 font-golos">Мы свяжемся с вами в течение часа</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
-                  <h3 className="font-oswald text-2xl font-bold text-stone-800 mb-6">Оставить заявку</h3>
+                  <h3 className="font-oswald text-2xl font-bold text-stone-800 mb-6">Анкета сборщика</h3>
 
                   <div className="grid grid-cols-2 gap-4">
                     <div>
@@ -342,13 +346,13 @@ export default function Index() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-golos font-medium text-stone-600 mb-1.5">Точка сбора</label>
+                    <label className="block text-sm font-golos font-medium text-stone-600 mb-1.5">Удобный сад</label>
                     <select
                       value={formData.point}
                       onChange={(e) => setFormData({ ...formData, point: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border-2 border-stone-100 focus:border-orange-400 focus:outline-none font-golos text-stone-800 transition-colors bg-stone-50 appearance-none"
                     >
-                      <option value="">Выберите точку...</option>
+                      <option value="">Выберите сад...</option>
                       {APPLE_POINTS.map((p) => (
                         <option key={p.id} value={p.name}>{p.name}</option>
                       ))}
@@ -356,15 +360,18 @@ export default function Index() {
                   </div>
 
                   <div>
-                    <label className="block text-sm font-golos font-medium text-stone-600 mb-1.5">Количество (кг)</label>
-                    <input
-                      type="number"
-                      min="10"
+                    <label className="block text-sm font-golos font-medium text-stone-600 mb-1.5">Желаемый график</label>
+                    <select
                       value={formData.amount}
                       onChange={(e) => setFormData({ ...formData, amount: e.target.value })}
-                      placeholder="Минимум 10 кг"
-                      className="w-full px-4 py-3 rounded-xl border-2 border-stone-100 focus:border-orange-400 focus:outline-none font-golos text-stone-800 transition-colors bg-stone-50"
-                    />
+                      className="w-full px-4 py-3 rounded-xl border-2 border-stone-100 focus:border-orange-400 focus:outline-none font-golos text-stone-800 transition-colors bg-stone-50 appearance-none"
+                    >
+                      <option value="">Выберите вариант...</option>
+                      <option value="fullday">Полный день (07:00–19:00)</option>
+                      <option value="morning">Первая смена (07:00–13:00)</option>
+                      <option value="evening">Вторая смена (13:00–19:00)</option>
+                      <option value="flexible">Гибко, по договорённости</option>
+                    </select>
                   </div>
 
                   <div>
@@ -373,7 +380,7 @@ export default function Index() {
                       rows={3}
                       value={formData.comment}
                       onChange={(e) => setFormData({ ...formData, comment: e.target.value })}
-                      placeholder="Желаемый сорт, дата получения..."
+                      placeholder="Есть ли опыт, когда готовы приступить..."
                       className="w-full px-4 py-3 rounded-xl border-2 border-stone-100 focus:border-orange-400 focus:outline-none font-golos text-stone-800 transition-colors bg-stone-50 resize-none"
                     />
                   </div>
@@ -382,7 +389,7 @@ export default function Index() {
                     type="submit"
                     className="w-full bg-orange-500 hover:bg-orange-400 text-white font-oswald font-semibold text-lg py-4 rounded-xl transition-all duration-200 hover:scale-[1.02] shadow-lg shadow-orange-200"
                   >
-                    Отправить заявку 🍎
+                    Хочу работать сборщиком 🍎
                   </button>
                   <p className="text-stone-400 text-xs font-golos text-center">
                     Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
@@ -469,13 +476,13 @@ export default function Index() {
 
           <div className="text-center rounded-3xl p-10" style={{ background: "linear-gradient(135deg, #1a3a1a 0%, #2d5a1b 100%)" }}>
             <div className="text-5xl mb-4">🍎</div>
-            <h3 className="font-oswald text-3xl font-bold text-white mb-3">Готовы к заказу?</h3>
-            <p className="text-white/70 font-golos mb-6">Оставьте заявку и мы свяжемся с вами уже сегодня</p>
+            <h3 className="font-oswald text-3xl font-bold text-white mb-3">Хочешь работать в саду?</h3>
+            <p className="text-white/70 font-golos mb-6">Оставь анкету — свяжемся сегодня и назначим выход на смену</p>
             <button
               onClick={() => scrollTo("requests")}
               className="bg-orange-500 hover:bg-orange-400 text-white font-oswald font-semibold text-lg px-10 py-3.5 rounded-2xl transition-all duration-200 hover:scale-105 shadow-lg"
             >
-              Оставить заявку
+              Хочу работать
             </button>
           </div>
         </div>

@@ -1,0 +1,32 @@
+{
+  "tests": [
+    {
+      "name": "OPTIONS preflight",
+      "method": "OPTIONS",
+      "path": "/",
+      "expectedStatus": 200
+    },
+    {
+      "name": "Отправка заявки",
+      "method": "POST",
+      "path": "/",
+      "body": {
+        "name": "Тест Тестов",
+        "phone": "+79000000000",
+        "point": "Сад «Троекурово»",
+        "amount": "Полный день",
+        "comment": "Тестовая заявка"
+      },
+      "expectedStatus": 200,
+      "expectedBody": {"success": true},
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Ошибка без имени",
+      "method": "POST",
+      "path": "/",
+      "body": {"phone": "+79000000000"},
+      "expectedStatus": 400
+    }
+  ]
+}

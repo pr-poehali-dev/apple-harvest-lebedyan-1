@@ -43,8 +43,13 @@ export default function Index() {
     return () => observer.disconnect();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    await fetch("https://functions.poehali.dev/0e8b2913-1f9a-4a1a-82a3-dd06f34ec858", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(formData),
+    });
     setFormSent(true);
     setTimeout(() => setFormSent(false), 4000);
     setFormData({ name: "", phone: "", point: "", amount: "", comment: "" });

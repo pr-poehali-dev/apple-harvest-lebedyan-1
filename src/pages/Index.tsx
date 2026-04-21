@@ -138,7 +138,7 @@ export default function Index() {
             </div>
 
             <div className="inline-flex items-center gap-2 bg-orange-500/80 border border-orange-400/50 rounded-full px-4 py-1.5 mb-4 animate-fade-up">
-              <span className="text-white text-sm font-golos font-semibold">🔥 Срочный набор — сезон уже начался!</span>
+              <span className="text-white text-sm font-golos font-semibold">🔥 Срочный набор — сезон скоро начнётся!</span>
             </div>
 
             <h1 className="font-oswald text-5xl md:text-7xl font-bold text-white leading-tight mb-6 animate-fade-up-delay-1">

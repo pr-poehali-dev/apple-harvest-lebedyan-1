@@ -2,10 +2,8 @@ import { useState, useEffect } from "react";
 import Icon from "@/components/ui/icon";
 
 const APPLE_POINTS = [
-  { id: 1, name: "Сад «Лебедянский»", address: "ул. Садовая, 12", hours: "08:00–18:00", available: "Антоновка, Белый налив" },
-  { id: 2, name: "Точка «Речная»", address: "пер. Речной, 3", hours: "09:00–17:00", available: "Семеренко, Гала" },
-  { id: 3, name: "Сад «Центральный»", address: "ул. Ленина, 45", hours: "07:00–19:00", available: "Антоновка, Мелба" },
-  { id: 4, name: "«Усадьба Петровых»", address: "д. Троекурово, 8", hours: "10:00–16:00", available: "Джонатан, Симиренко" },
+  { id: 1, name: "Сад «Троекурово»", address: "с. Троекурово, Лебедянский р-н", hours: "07:00–19:00", available: "Антоновка, Белый налив, Семеренко" },
+  { id: 2, name: "Сад «Агроном»", address: "пос. Агроном, г. Лебедянь", hours: "07:00–19:00", available: "Гала, Мелба, Джонатан" },
 ];
 
 const FAQ_ITEMS = [

@@ -148,9 +148,9 @@ export default function Index() {
             </h1>
 
             <p className="text-white/80 text-lg font-golos mb-8 leading-relaxed animate-fade-up-delay-2">
-              Ищем сборщиков яблок в Лебедяни и окрестностях.<br />
-              Сдельная оплата от 3 руб/кг. Гибкий график.<br />
-              Опыт не нужен — обучим на месте!
+              Ищем сборщиков в сады Лебедяни — Троекурово и Агроном.<br />
+              <span className="text-orange-300 font-semibold">5 руб/кг</span>, выплата каждые 3 дня. Свободный график.<br />
+              Бесплатное питание, проезд и проживание для вахтовиков!
             </p>
 
             <div className="flex flex-wrap gap-3 animate-fade-up-delay-3">
